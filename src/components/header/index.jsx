@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useSelector } from 'react-redux/es/hooks/useSelector';
 import { useDispatch } from 'react-redux';
-import { loginUser, logoutUser } from '../../redux/user/actions';
+import { login, logout } from '../../redux/user/slice';
 // Components
 import Cart from '../cart/index';
 
@@ -22,11 +22,11 @@ function Header() {
   };
 
   const handleLoginClick = () => {
-    dispatch(loginUser({ name: 'Tiggas' }));
+    dispatch(login({ name: 'Tiggas' }));
   };
 
   const handleLogoutClick = () => {
-    dispatch(logoutUser());
+    dispatch(logout());
   };
 
   return (
